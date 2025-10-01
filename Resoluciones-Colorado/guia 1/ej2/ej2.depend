@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1757788353 source:c:\users\bauts\desktop\progra b\guia 1\ej2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"pilas.h"
+
+1757787643 c:\users\bauts\desktop\progra b\guia 1\ej2\pilas.h
+

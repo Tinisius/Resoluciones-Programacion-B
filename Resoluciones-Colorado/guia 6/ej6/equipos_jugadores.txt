@@ -1,0 +1,11 @@
+River_Plate  48 3
+Gonzalo_Montiel  28 A
+Giuliano_Galoppo 25 S
+Lautaro_Rivero   22 A
+Racing_Club  40 2
+Santiago_Sosa    26 A
+Gabriel_Arias    32 A
+Boca_Juniors 1 2
+Lautaro_Blanco   26 A
+Leandro_Paredes  28 S
+

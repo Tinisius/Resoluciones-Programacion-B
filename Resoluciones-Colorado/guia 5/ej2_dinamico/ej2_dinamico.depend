@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1758408258 source:c:\users\bauts\desktop\progra b\guia 5\ej2_dinamico\pilad.c
+	"pilad.h"
+	<stdlib.h>
+
+1758407791 c:\users\bauts\desktop\progra b\guia 5\ej2_dinamico\pilad.h
+
+1758408319 source:c:\users\bauts\desktop\progra b\guia 5\ej2_dinamico\main.c
+	<stdio.h>
+	<stdlib.h>
+	"pilad.h"
+
