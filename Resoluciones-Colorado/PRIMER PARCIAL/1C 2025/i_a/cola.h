@@ -3,7 +3,7 @@
 typedef struct{
     char cod_barra[15];
     float cant_comprada;
-}TelementosC
+}TelementosC;
 
 typedef struct {
     TelementosC nodo[MAX];
