@@ -146,7 +146,7 @@ void actuLS(TlistaS *Productos, TlistaD *StockNeg, char fecha[], char codB[], fl
         ant = act
         act = act->sig;
 
-    if (strcmp(act->codB, codB) == 0){      //si el producto existia (lo encotró) -> actualizo
+    if (strcmp(act->codB, codB) == 0){      //si el producto existia (lo encotrÃ³) -> actualizo
         act->stock += cant;
         act->precio = (act->margen+100)/100 * precio;
 
@@ -155,14 +155,17 @@ void actuLS(TlistaS *Productos, TlistaD *StockNeg, char fecha[], char codB[], fl
         }
         InsertaSub(act, fecha, precio, cant)      //inserto la compra en la sublista de Act
     }
-    else{                                    //si el producto no existia (se pasó de largo) -> lo inserto
+    else{                                    //si el producto no existia (se pasÃ³ de largo) -> lo inserto
         N = (TlistaS) malloc(sizeof(nodoS));
         N->codB = codB;
         N->precio = precio * 1.5;
         N->stock = cant;                    //inserto en el nuevo nodo de LS
         N->margen = 50;
         N->sig = act;
-        ant->sig = N;
+        if (act == *Prodructos)
+            *productos = N;
+        else
+            ant->sig = N;
         InsertaSub(N, fecha, precio, cant)      //inserto la compra en la sublista de N
 
     }
@@ -172,7 +175,7 @@ void sacaD(TlistaD *StockNeg, char codB[]){
     nodoD aux = StockNeg->pri, del;
 
     while (aux != NULL){
-        if (strcmp(aux->codB, codB) == 0){        // si encontré el codigo a borrar -> lo borro
+        if (strcmp(aux->codB, codB) == 0){        // si encontrÃ© el codigo a borrar -> lo borro
             if (aux == StockNeg->pri){          //si es el primero
                 del = aux;
                 aux = aux->sig;
