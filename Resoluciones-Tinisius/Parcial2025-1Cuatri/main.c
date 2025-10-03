@@ -162,7 +162,7 @@ void actuLS(TlistaS *Productos, TlistaD *StockNeg, char fecha[], char codB[], fl
         N->stock = cant;                    //inserto en el nuevo nodo de LS
         N->margen = 50;
         N->sig = act;
-        if (act == *Prodructos)
+        if (act == *Productos)      //inserta al principio
             *productos = N;
         else
             ant->sig = N;
