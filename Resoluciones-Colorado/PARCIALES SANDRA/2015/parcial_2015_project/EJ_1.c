@@ -24,14 +24,15 @@ void elim_recu(TPila *P,TelemP x,int *cant){
     if (VaciaP(P))
         *cant=0;
         else{
-            if (sacaP(P,dato) == x){
-                elim_recu(P,x,cant);
-                cant++;
+            sacaP(P,dato);
+            elim_recu(P,x,cant);
+            if (dato == x){
+                (*cant)++;
             }
             else{
-                elim_recu(P,x,cant);
                 poneP(P,dato);
             }
         }
 }
+
 
