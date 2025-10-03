@@ -34,6 +34,9 @@
 		<Unit filename="EJ_1.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="EJ_2.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
