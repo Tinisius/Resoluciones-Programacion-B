@@ -203,7 +203,7 @@ void sacaD(TlistaD *StockNeg, char codB[]){
 
 
 void InsertaSub(TlistaS nodoLS, char fecha[], float precio, float cant){
-    nodito *N = (nodito) malloc(sizeof(nodito));
+    nodito *N = (nodito*) malloc(sizeof(nodito));
     N->cant = cant;
     strcpy(N->fecha, fecha);
     N->Precio =  precio;
