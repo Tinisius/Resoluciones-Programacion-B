@@ -19,13 +19,13 @@ typedef nodito *sublista;       //defino un tipo (al pedo pero bue)
 typedef struct nodoD{
     char cod[6];
     char nom_ap[31];
-    char estudia[2];
+    char estudia;
     sublista sub;
-}nodo;
-typedef Pnodo *nodo;            //defino un tipo (al pedo pero bue)
+}nodoD;
+typedef PnodoD *nodoD;            //defino un tipo (al pedo pero bue)
 
 typedef struct{
-    Pnodo pri, ult;
+    PnodoD pri, ult;
 }TlistaD;
 
 void IncisoA(TlistaD LD, Tcola C);
