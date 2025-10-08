@@ -9,7 +9,7 @@ int main(){
     TPila P;
     TElementoP x;
     int cant=0;
-
+    cargarP(*P);
     borraElemP(&P, x, cant);
     return 0;
 }
@@ -19,12 +19,11 @@ void borraElemP(TPila *P, TElemento x, int *cant){
     TElementoP dato;
     if (!vaciaP(*P)){
         sacaP(P, dato);
+        borraElemP(P, x, cant);
         if (dato == X)
-            borraElemP(P, x, cant++);
-        else{
-            borraElemP(P, x, cant);
+            *cant++;
+        else
             poneP(P, dato);
-        }
     }
 }
 ///IMPLEMENTACION ESTATIICA
