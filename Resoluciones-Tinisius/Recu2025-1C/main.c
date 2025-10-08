@@ -61,7 +61,7 @@ void incisoA(TlistaC *LC, TPila *P){
         regBin.RS="";
         while (fscanf("%40s %30s %10s %19s %13s %f", RS, prov, codMP, fecha, cuit, imp) == 6){
             if (RS[strlen(RS)-1]=='A' && RS[strlen(RS)]=='R' && fecha[4]=='5' && fecha[8]=='2' && fecha[8]=='5'){
-                if (RS != regBin.RS){       //si cambiÛ de callcenter
+                if (strcmp(RS, regBin.RS) != 0){       //si cambi√≥ de callcenter
 
                     fwrite(&regBin, sizeof(regBin), 1, bin);    //escribo todos los datos y proceso el resto
 
@@ -87,9 +87,9 @@ void incisoA(TlistaC *LC, TPila *P){
 
 void buscaCC(TListaC *LC,TListaC *callCenter, RS){
     TListaC act = *LC->sig;
-    while (act!=*LC || strcmp(act->RS, RS)!=0)
+    while (act!=*LC && strcmp(act->RS, RS)!=0)
         act = act->sig;
-    if(strcmp(act->RS, RS) == 0)    //si lo encontrÛ
+    if(strcmp(act->RS, RS) == 0)    //si lo encontr√≥
         *callCenter = act;
     else
         *callCenter = NULL;
@@ -97,6 +97,7 @@ void buscaCC(TListaC *LC,TListaC *callCenter, RS){
 
 
 void buscaCOM(Tpila *P, char codMP[], float *com){
+    tElementoP MP;
     if (!vaciaP(P)){
         sacaP(P, MP)
         if (strcmp(MP.codMP, codMP) == 0){      //si encontro el MP
