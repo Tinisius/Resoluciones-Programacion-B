@@ -59,7 +59,7 @@ void incisoA(TlistaC *LC, TPila *P){
 
     if (ventas!=NULL && bin!=NULL){     //Si se abrieron bien los archivos, procesa
         regBin.RS="";
-        while (fscanf("%40s %30s %10s %19s %13s %f", RS, prov, codMP, fecha, cuit, imp) == 6){
+        while (fscanf("%s %s %s %s %s %f", RS, prov, codMP, fecha, cuit, imp) == 6){ /// LA LECTURA SE HACE CON %S SIN INDICAR EL TAMAÑO CORTA EN EL ESPACIO (ASUMO '_')
             if (RS[strlen(RS)-1]=='A' && RS[strlen(RS)]=='R' && fecha[4]=='5' && fecha[8]=='2' && fecha[8]=='5'){
                 if (strcmp(RS, regBin.RS) != 0){       //si cambió de callcenter
 
