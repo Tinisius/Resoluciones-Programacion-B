@@ -22,6 +22,7 @@ int main()
 }
 
 int longu(arbol a){
+ int max;
  if(a==NULL)
     return 0;
  else{
