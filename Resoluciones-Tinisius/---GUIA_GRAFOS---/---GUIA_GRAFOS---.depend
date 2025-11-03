@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1758298180 source:c:\users\tinis\desktop\programacion\resolucionesprogra\resoluciones-tinisius\---guia_grafos---\pilas.c
+	<stdlib.h>
+	"pilasdin.h"
+
+1758298405 c:\users\tinis\desktop\programacion\resolucionesprogra\resoluciones-tinisius\---guia_grafos---\pilasdin.h
+
+1762185296 source:c:\users\tinis\desktop\programacion\resolucionesprogra\resoluciones-tinisius\---guia_grafos---\colas.c
+	<stdlib.h>
+	"colasdin.h"
+
+1762185296 c:\users\tinis\desktop\programacion\resolucionesprogra\resoluciones-tinisius\---guia_grafos---\colasdin.h
+

@@ -13,8 +13,8 @@ int main(){
     return 0;
 }
 //---------------------------------------------------------------
-
-void P5a(TArbol a, int prof, int *maxProf){
+//altura de un arbol binario
+void P5a(TArbol a, int prof, int *maxProf){ //esta feo, hay una mejor solucion
     if (a!=NULL){
         profA(a->izq, prof+1, maxprof);
         profA(a->der, prof+1, maxprof);
@@ -23,6 +23,17 @@ void P5a(TArbol a, int prof, int *maxProf){
         if (prof > *maxprof)
             *maxProf=prof;
 }
+
+int altura(TArbol a) {  //mejor solucion
+    if (a == NULL)
+        return 0;  // un árbol vacío tiene altura 0
+    else {
+        int altIzq = altura(a->izq);
+        int altDer = altura(a->der);
+        return 1 + (altIzq > altDer ? altIzq : altDer);
+    }
+}
+
 
 //---------------------------------------------------------------
 
@@ -121,6 +132,19 @@ void P16 (TArbol *A, int x){    //A es un puntero a puntero entonces *A es un pu
 
 //---------------------------------------------------------------
 
-v
+int cuentaN(arbol a, pos p){
+    pos c;
+    acum=1;
+    if (!nulo(p)){
+        c=hijoMasIzq(p, a);
+        while (!nulo(c)){
+            acum += cuentaN(c, a);
+            c=hnoDer(c, a);
+        }
+        return acum;
+    }
+    else
+        return 0;
+}
 
 
